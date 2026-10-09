@@ -1,0 +1,22 @@
+{
+  "name": "sawt",
+  "version": "1.0.0",
+  "description": "Sawt music player",
+  "main": "main.js",
+  "author": "Sawt",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win portable --publish never"
+  },
+  "devDependencies": {
+    "electron": "33.2.1",
+    "electron-builder": "25.1.8"
+  },
+  "build": {
+    "appId": "com.sawt.player",
+    "productName": "Sawt",
+    "files": ["main.js", "index.html", "icon.png"],
+    "win": { "target": "portable", "icon": "icon.png" },
+    "portable": { "artifactName": "Sawt.exe" }
+  }
+}
